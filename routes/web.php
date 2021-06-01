@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\{ProductController};
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,6 +13,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::resource('products', 'ProductController');//->middleware('auth');
 
 Route::get('/', function () {
     return view('welcome');
